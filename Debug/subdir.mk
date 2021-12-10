@@ -8,21 +8,24 @@ CPP_SRCS += \
 ../Bill.cpp \
 ../Coupon.cpp \
 ../DataLinkLayer.cpp \
-../Worker.cpp 
+../Worker.cpp \
+../Helper.cpp 
 
 OBJS += \
 ./Acceptor.o \
 ./Bill.o \
 ./Coupon.o \
 ./DataLinkLayer.o \
-./Worker.o 
+./Worker.o \
+./Helper.o 
 
 CPP_DEPS += \
 ./Acceptor.d \
 ./Bill.d \
 ./Coupon.d \
 ./DataLinkLayer.d \
-./Worker.d 
+./Worker.d \
+./Helper.d
 
 
 # Each subdirectory must supply rules for building sources it contributes
