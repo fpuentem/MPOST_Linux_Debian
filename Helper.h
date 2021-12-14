@@ -1,10 +1,6 @@
-#include "Acceptor.h"
+// #include "Acceptor.h"
 
-using namespace std;
-
-namespace MPOST
-{
+// using namespace std;
   void CreateAcceptor();
   int RunLoop();
-  void AddEventListener(int eventType, void (*eventHandler)(CAcceptor *acceptor, int value));
-}
+  // void AddEventListener(int eventType, void (*eventHandler)(MPOST::CAcceptor *acceptor, int value));
