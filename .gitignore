@@ -19,8 +19,9 @@ Release/DataLinkLayer.d
 Release/DataLinkLayer.o
 Release/Worker.d
 Release/Worker.d
-Release/Helper.o
+Release/Helper.d
 Release/Helper.o
 Release/libMPOST_Linux.a
 Release/libMPOST_Linux.so
 MPOST_Log_ttyUSB0.txt
+*.so
