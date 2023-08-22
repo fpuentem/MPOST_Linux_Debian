@@ -43,6 +43,7 @@ all: libMPOST_Linux.a libMPOST_Linux.so
 libMPOST_Linux.a: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC Archiver'
+	$(CXX) -rdynamic -shared -fPIC -o libMPOST_Linux.so $(OBJS) $(USER_OBJS) $(LIBS)
 	ar -r "libMPOST_Linux.a" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
