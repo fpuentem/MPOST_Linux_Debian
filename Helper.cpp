@@ -24,6 +24,10 @@ int RunLoop() {
     if (s == "c")
       acceptor->Close();
     
+    if ( s == "a"){
+      bool a = true;
+      acceptor->SetEnableAcceptance(a); 
+    }
     // Exit
     if (s == "x")
       break;
