@@ -30,10 +30,14 @@ int RunLoop() {
       acceptor->SetAutoStack(a); 
     }
 
-    if (s  == "b"){
+    if (s  == "bt"){
       for(unsigned int i = 0; i < acceptor->GetBillValues().size();i++){
         cout << acceptor->GetBillValues()[i].ToString() << endl;
       }
+    }
+    
+    if (s  == "b"){
+        cout << acceptor->GetBill().ToString() << endl;
     }
     // Exit
     if (s == "x")
