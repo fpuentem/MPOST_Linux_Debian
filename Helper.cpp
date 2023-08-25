@@ -26,7 +26,14 @@ int RunLoop() {
     
     if ( s == "a"){
       bool a = true;
-      acceptor->SetEnableAcceptance(a); 
+      acceptor->SetEnableAcceptance(a);
+      acceptor->SetAutoStack(a); 
+    }
+
+    if (s  == "b"){
+      for(unsigned int i = 0; i < acceptor->GetBillValues().size();i++){
+        cout << acceptor->GetBillValues()[i].ToString() << endl;
+      }
     }
     // Exit
     if (s == "x")
