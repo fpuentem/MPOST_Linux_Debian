@@ -39,6 +39,11 @@ int RunLoop() {
     if (s  == "b"){
         cout << acceptor->GetBill().ToString() << endl;
     }
+
+    if  (s == ""){
+      cout << acceptor->GetCashBoxTotal() << endl;
+    }
+    
     // Exit
     if (s == "x")
       break;
