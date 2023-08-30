@@ -27,7 +27,7 @@ int RunLoop() {
     if ( s == "a"){
       bool a = true;
       acceptor->SetEnableAcceptance(a);
-      acceptor->SetAutoStack(a); 
+      // acceptor->SetAutoStack(a); 
     }
 
     if (s  == "bt"){
