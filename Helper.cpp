@@ -11,6 +11,37 @@ void CreateAcceptor() {
   //acceptor->Open("tty", MPOST::A);
 }
 
+void OpenAcceptor() {
+  acceptor->Open("tty", MPOST::A);
+}
+
+void CloseAcceptor() {
+  acceptor->Close();
+}
+
+void EnableAcceptor() {
+  bool a = true;
+  acceptor->SetEnableAcceptance(a);
+}
+
+void AutomaticLoopAcceptor() {
+  acceptor->Open("tty", MPOST::A);
+  
+  bool a = true;
+  acceptor->SetEnableAcceptance(a);
+  acceptor->SetAutoStack(a);
+  enum MPOST::State current_state; 
+  current_state = acceptor->GetDeviceState();
+  while (true)
+  { 
+    current_state = acceptor->GetDeviceState();
+    if (current_state == MPOST::Stacked) {
+      cout << acceptor->GetBill().ToString() << endl;
+    }
+  }
+
+}
+
 int RunLoop() {
   string s;
     
