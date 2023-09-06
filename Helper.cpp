@@ -35,10 +35,87 @@ int AutomaticLoopAcceptor() {
   while (true)
   { 
     current_state = acceptor->GetDeviceState();
-    cout << current_state << endl;
-    if (current_state == MPOST::Stacked) {
-      cout << acceptor->GetBill().ToString() << endl;
+    // cout << current_state << endl;
+    switch (current_state) {
+        case MPOST::Disconnected:
+            // Handle the Disconnected state
+            break;
+
+        case MPOST::Connecting:
+            // Handle the Connecting state
+            break;
+
+        case MPOST::PupEscrow:
+            // Handle the PupEscrow state
+            break;
+
+        case MPOST::Idling:
+            // Handle the Idling state
+            break;
+
+        case MPOST::Accepting:
+            // Handle the Accepting state
+            break;
+
+        case MPOST::Escrow:
+            // Handle the Escrow state
+            break;
+
+        case MPOST::Stacking:
+            // Handle the Stacking state
+            break;
+
+        case MPOST::Stacked:
+            cout << acceptor->GetBill().ToString() << endl;
+            break;
+
+        case MPOST::Returning:
+            // Handle the Returning state
+            break;
+
+        case MPOST::Returned:
+            // Handle the Returned state
+            break;
+
+        case MPOST::Rejected:
+            // Handle the Rejected state
+            break;
+
+        case MPOST::Stalled:
+            // Handle the Stalled state
+            break;
+
+        case MPOST::Failed:
+            // Handle the Failed state
+            break;
+
+        case MPOST::CalibrateStart:
+            // Handle the CalibrateStart state
+            break;
+
+        case MPOST::Calibrating:
+            // Handle the Calibrating state
+            break;
+
+        case MPOST::DownloadStart:
+            // Handle the DownloadStart state
+            break;
+
+        case MPOST::DownloadRestart:
+            // Handle the DownloadRestart state
+            break;
+
+        case MPOST::Downloading:
+            // Handle the Downloading state
+            break;
+
+        default:
+            // Handle unexpected cases
+            break;
     }
+    // if (current_state == MPOST::Stacked) {
+    //   cout << acceptor->GetBill().ToString() << endl;
+    // }
   }
   return 1;
 }
