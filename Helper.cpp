@@ -24,22 +24,23 @@ void EnableAcceptor() {
   acceptor->SetEnableAcceptance(a);
 }
 
-void AutomaticLoopAcceptor() {
+int AutomaticLoopAcceptor() {
   acceptor->Open("tty", MPOST::A);
-  
+
   bool a = true;
   acceptor->SetEnableAcceptance(a);
   acceptor->SetAutoStack(a);
   enum MPOST::State current_state; 
-  current_state = acceptor->GetDeviceState();
+  
   while (true)
   { 
     current_state = acceptor->GetDeviceState();
+    cout << current_state << endl;
     if (current_state == MPOST::Stacked) {
       cout << acceptor->GetBill().ToString() << endl;
     }
   }
-
+  return 1;
 }
 
 int RunLoop() {
