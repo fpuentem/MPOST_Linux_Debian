@@ -3,6 +3,6 @@
 extern "C" {// using namespace std;
   void CreateAcceptor();
   int RunLoop();
-  void AutomaticLoopAcceptor();
+  int AutomaticLoopAcceptor();
   // void AddEventListener(int eventType, void (*eventHandler)(MPOST::CAcceptor *acceptor, int value));
 }
